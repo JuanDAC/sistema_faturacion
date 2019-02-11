@@ -1,0 +1,89 @@
+<div class="l-content-all">
+   <div class="l-content-flex">
+    <h1 class="titulo_factura">Informacion Adicional</h1>
+       <form id="crearfacturaVenta" class="MyFormulario">
+          <fieldset>
+           
+           <div class="cajaInfo">
+               <label for="facturaVentaNit">NIT</label>
+                <select 
+                onchange="My.getCtrl().traerCliente(this);"
+                onclick="My.getCtrl().traerClienteNit(this);"
+                id="facturaVentaNit" 
+                required>
+                  <option value="">NIT</option>
+                </select>
+                <div class="validation"></div>
+
+                <label for="facturaVentaCliente">Cliente</label>
+                <input 
+                name="facturaVentaCliente"
+                id="facturaVentaCliente" 
+                type="text" 
+                placeholder="Cliente" 
+                readonly
+                required>
+                <div class="validation"></div>
+           </div>
+           <div class="cajaInfo">
+               <label for="facturaVentaVendedor" >Vendedor</label>
+                <select id="facturaVentaVendedor" required>
+                  <option value="">Vendedor</option>
+                  <option value="0-13">Usuario</option>
+                </select>
+                <div class="validation"></div>
+           </div>
+           <div class="cajaInfo">
+               <label for="facturaVentaTipoPago" >Tipo De Pago</label>
+                <select id="facturaVentaTipoPago" required>
+                  <option value="">Tipo De Pago</option>
+                  <option value="Efectivo">Efectivo</option>
+                  <option value="TarjDeb">TarjDeb</option>
+                  <option value="TarCr">TarCr</option>
+                  <option value="Credito">Credito</option>
+                </select>
+                <div class="validation"></div>
+
+                <label 
+                for="facturaVentaVence">Vence</label>
+                <input 
+                type="date" 
+                id="facturaVentaVence" 
+                name="facturaVentaVence" 
+                value="" 
+                required>
+                <div class="validation"></div>
+
+                <label 
+                for="facturaVentaObservaciones">Observaciones</label>
+                <textarea 
+                    
+                placeholder="Observaciones" 
+                    
+                id="facturaVentaObservaciones" 
+                    
+                required></textarea>
+                <div class="validation"></div>
+
+                  <input 
+                  type="radio" 
+                  id="facturaVentaNAC" 
+                  name="facturaVentaNACEXP">
+                 <label class="checklavel" for="facturaVentaNAC"></label>
+                  <lavel  class="label-inline lavel-check">Nacional / Exportación</lavel>
+                  <input 
+                  type="radio" 
+                  id="facturaVentaEXP" 
+                  name="facturaVentaNACEXP">
+                  <label class="checklavel" for="facturaVentaEXP"></label>
+                  
+                          
+
+           </div>
+            
+            <div class="button-primary-a" onclick="My.getCtrl().crear(My.getID('crearfacturaVenta').ID);location.href='#/mostrarFactura';My.getCtrl().listar(true);">Finalizar</div>
+            
+          </fieldset>
+        </form>
+   </div>
+</div>

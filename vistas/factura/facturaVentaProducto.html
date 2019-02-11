@@ -1,0 +1,108 @@
+<div class="l-content-all">
+  <div class="l-content-flex">
+      <h1 class="titulo_factura">Producto</h1>
+       <form id="facturaVentaProducto" class="MyFormulario">
+          <fieldset>
+            <div class="cajaInfo">
+               
+                <label 
+                for="facturaVentaProductoCodigo">Codigo</label>
+                <select 
+                onchange="My.getCtrl().facturaCodigoProductoObtener(this);"
+                onclick="My.getCtrl().facturaCodigoProducto(this);" 
+                name="facturaVentaProductoCodigo"
+                id="facturaVentaProductoCodigo" 
+                required>
+                  <option value="">Codigo</option>
+                </select>
+                <div class="validation"></div>
+                
+                <label 
+                for="facturaVentaProductoDescripcion">Descripción</label>
+                <textarea 
+                name="facturaVentaProductoDescripcion"                
+                id="facturaVentaProductoDescripcion"  
+                placeholder="Descripción" 
+                readonly
+                required></textarea>
+                <div class="validation"></div>
+               
+                <label 
+                for="facturaVentaProductoExistancias">Existencias</label>
+                <input 
+                name="facturaVentaProductoExistancias"
+                id="facturaVentaProductoExistancias"  
+                type="number" 
+                placeholder="Existencias" 
+                readonly
+                required>
+                <div class="validation"></div>
+               
+                <label 
+                for="facturaVentaProductoValorUnidad">Valor Unidad</label>
+                <input 
+                name="facturaVentaProductoValorUnidad"
+                id="facturaVentaProductoValorUnidad"  
+                type="number" 
+                placeholder="Valor Unidad" 
+                readonly
+                required>
+                <div class="validation"></div>
+                
+            </div>
+            
+            <div class="cajaInfo">
+              
+                <label 
+                for="facturaVentaProductoCantidad">Cantidad</label>
+                <input 
+                onchange="My.getCtrl().cantidadPoductoUnico(this);"
+                name="facturaVentaProductoCantidad"
+                id="facturaVentaProductoCantidad"
+                autocomplete="off" 
+                type="text"
+                pattern="[0-9+]{1,}" 
+                placeholder="Cantidad" 
+                required >
+                <div class="validation"></div>
+
+                <label 
+                for="facturaVentaProductoDescuento">Porcentaje De Descuento</label>
+                <input 
+                onchange="My.getCtrl().cantidadPoductoUnico(this);"
+                name="facturaVentaProductoDescuento"
+                id="facturaVentaProductoDescuento" 
+                autocomplete="off" 
+                type="text"
+                pattern="[0-9+]{1,2}[%]$" 
+                placeholder="Descuento" 
+                required>
+                <div class="validation"></div>
+
+               
+                <label 
+                for="facturaVentaProductoValorTotal">Valor Total</label>
+                <input 
+                name="facturaVentaProductoValorTotal"
+                id="facturaVentaProductoValorTotal"  
+                type="text" 
+                placeholder="Valor Total" 
+                readonly>
+                <div class="validation"></div>
+
+            </div>
+            
+            
+              
+<!--
+            <div class="button-primary-a" onclick="My.getCtrl().crear(My.getID('facturaVentaProducto').ID);location.href='#/mostrarFactura';My.getCtrl().listar(true);">Finalizar</div> 
+-->
+           
+            
+            <div onclick="My.getCtrl().agregarProductoAFacturar(My.getID('crearfacturaVenta').ID);Evento.ID('facturaVentaProducto').reset();" class="button-primary-a">Otro Producto</div>
+            <div onclick="My.getCtrl().agregarProductoAFacturar(My.getID('crearfacturaVenta').ID);Evento.ID('facturaVentaProducto').reset();location.href='#/facturaVenta'; "  class="button-primary-a">Continuar</div>
+            
+          </fieldset>
+        </form>
+   </div>
+</div>

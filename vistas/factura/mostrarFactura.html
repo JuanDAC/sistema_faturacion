@@ -1,0 +1,207 @@
+<div class="l-content-all">
+    <div class="l-content-flex">
+        
+        <h1 class="titulo_factura" id="tituloFactura"></h1>
+        <template id="contenidoNumeroFactura">
+            Factura No. <small>
+                <i class="numeroFactura"></i>
+            </small>
+        </template>
+<!--
+        
+        Info Empresa
+        
+-->
+       <div class="divInfoEmprasa" id="divInfoOrganizacion">
+            <ol class="infoEmprasa">
+            </ol>           
+       </div>
+       <template id="contenidoInfoEmprasa">
+           <ol class="infoEmprasa">
+                <li class="organizacionNombre"></li>
+                <li class="organizacionNit"></li>
+                <li class="organizacionDomicilio"></li>
+                <li class="organizacionCiudad"></li>
+                <li class="organizacionTelefono"></li>
+                <li class="organizacionCorreo"></li>
+                <li class="organizacionWeb"></li>
+                <li class="organizacionRegimen"></li>
+                <li class="organizacionRetenedorIVA"></li>
+                <li class="organizacionICA"></li>
+                <li class="organizacionAutorizacionDIAN"></li>
+                <li class="organizacionRango"></li>
+            </ol>       
+       </template>
+       
+       
+<!--
+        
+        Cliente
+        
+-->
+       
+        <div class="divCliente">
+            <table class="tablaCliente" >
+            <caption>Cliente</caption>
+            <thead>
+                <tr>
+                    <th >fecha</th>
+                    <th >vence</th>
+                    <th >nombre</th>
+                    <th >nit</th>
+                    <th >domicilio</th>
+                    <th >telefono</th>
+                    <th >pedido</th>
+                    <th >forma de pago</th> 
+                </tr>
+            </thead>
+            <tbody id="cuerpoTablaCliente">
+                <tr>
+                   <td>
+                        <time class="fechaActual">actual</time>  <!--float left-->
+                    </td>
+                    <td>
+                        <time class="fechaVence">vence</time>  <!--float rigth-->
+                    </td>
+                    <td class="clienteNombre"></td>
+                    <td class="clienteNit"></td>
+                    <td class="clienteDomicilio"></td>
+                    <td class="clienteTelefono"></td>
+                    <td class="clientePedido"></td>
+                    <td class="clienteFormaPago"></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        <template id="contenidoTablaCliente">
+            <tr>
+               <td>
+                    <time class="fechaActual">actual</time>  <!--float left-->
+                </td>
+                <td>
+                    <time class="fechaVence">vence</time>  <!--float rigth-->
+                </td>
+                <td class="clienteNombre"></td>
+                <td class="clienteNit"></td>
+                <td class="clienteDomicilio"></td>
+                <td class="clienteTelefono"></td>
+                <td class="clientePedido"></td>
+                <td class="clienteFormaPago"></td>
+            </tr>
+        </template>
+<!--
+        
+        Producto
+        
+-->
+       <input id="validArticulos" type="radio">
+        <label for="validArticulos"  class="divProductos">
+            <table class="tablaProductos">
+            <caption>Articulos</caption>
+            <thead>
+                <tr>
+                    <th>codigo</th>
+                    <th>Descripcion</th>
+                    <th>Cantidad</th>
+                    <th>Descuento</th>
+                    <th>Precio unidad</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTablaProductos">
+                <tr>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                    <td class=""></td>
+                </tr>
+            </tbody>
+            </table>
+        </label>
+        
+        <template id="contenidoTablaProductos">
+            <tr>
+                <tr>
+                    <td class="productosCodigo"></td>
+                    <td class="productosDescripcion"></td>
+                    <td class="productosCantidad"></td>
+                    <td class="productosDescuento"></td>
+                    <td class="productosPrecioUnidad"></td>
+                    <td class="productosPrecioTotal"></td>
+                </tr>
+            </tr>
+        </template>
+        
+        
+<!--
+        
+        Totales 
+        
+-->
+        
+        <div class="divTotales">
+            <table class="tablaTotales">
+            <thead>
+                <tr>
+                    <th>Subtotal</th>
+                    <th>IVA</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTablaTotales">
+            </tbody>
+            </table>
+        </div>
+        
+        <template id="contenidoTablaTotales">
+            <tr>
+                <td class="totalesSubtotal"></td><!--SUMA DE los importes o TOTALES CON DESCUENTO -->
+                <td class="totalesIva"></td><!--IVA APLICADO A SUBTOTAL--> 
+                <td class="totalesTotal"></td><!--BUBTOTAL MAS IVA-->
+            </tr>
+        </template>
+        
+        
+        
+        
+        
+        
+        <div class="divCajaInfo">
+            <div class="cajaInfo" id="cajaNumerosALetras">cantidad con letras</div>
+            <div class="cajaInfo obcionesCajas"> Esta factura causara intereses de mora a la tasa maxima de interés autorizada por la ley, a partir de su fecha de vencimiento</div>
+            <div class="cajaInfo obcionesCajas">
+                <div class="cajaInfo obcionesCajas">observaciones</div>
+                <div class="cajaInfo" id="cajaInfoObservaciones">observaciones</div>
+            </div>
+        </div>
+            
+<!--
+        
+        Vendedor
+        
+
+        <div class="divVendedor">
+            <table class="tablaCliente">
+                <caption>Vendedor</caption>
+                <thead>
+                    <tr>
+                        <th>codigo</th>
+                        <th>nombre</th>
+                        <th>autoriza</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>codigo</td>
+                        <td>nombre</td>
+                        <td>C.C</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>   
+
+        
+    </div>
+</div>
+-->    

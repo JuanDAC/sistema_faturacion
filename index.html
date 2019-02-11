@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>contabilidad</title>
+    <!--
+            Dependecias fuentes
+    -->
+    
+    <!--
+            font-family: 'Roboto', sans-serif;
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet" />
+
+    <!--
+            css
+    -->
+    <link rel="stylesheet" href="css/menus-min.css" />
+    <link rel="stylesheet" href="css/milligram.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+</head>
+
+<body>
+    <div class="custom-menu-wrapper">
+        <header class="pure-menu custom-menu custom-menu-top">
+            <div class="pure-menu-heading custom-menu-brand">kaax</div>
+            <div class="custom-menu-toggle" id="toggle">
+                <s class="bar"></s><s class="bar"></s></div>
+        </header>
+        <nav class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+            <div class="custom-menu-screen"></div>
+            <ul id="menu" class="pure-menu-list">
+                <li class="pure-menu-item">
+                    <a href="#/seccionFactura" class="pure-menu-link">factura</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="#/seccionActualizaciones" class="pure-menu-link">actualizaciones</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="#/movimientoDeCaja" class="pure-menu-link">movimiento de caja</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="#/movimientoDeArticulos" class="pure-menu-link">movimiento de artículos</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="#/ajustesInventario" class="pure-menu-link">ajustes a inventario</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="#/informes" class="pure-menu-link">informes</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="#/resumen" class="pure-menu-link">resumen</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="#/cartera" class="pure-menu-link">cartera</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="#/ajustes" class="pure-menu-link">ajustes</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main id="vista">
+
+    </main>
+    <script src="js/acciones.js"></script>
+    <script src="js/libreria.js"></script>
+    <script src="js/rutas.js"></script>
+    <script src="js/contrladores/facturar.js"></script>
+
+    <script type="text/javascript">
+        document.getElementById('menu').addEventListener('click', function(e) {
+            if (document.getElementsByClassName('custom-menu-tucked')[0] === undefined) {
+                Evento.menuToggle();
+            };
+        });
+        document.getElementById('toggle').addEventListener('click', function(e) {
+            Evento.menuToggle();
+        });
+    </script>
+</body>
+</html>

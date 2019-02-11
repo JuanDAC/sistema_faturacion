@@ -1,0 +1,182 @@
+<div class="l-content-all">
+   <div class="l-content-flex">
+      <h1 class="titulo_factura">Nuevo Cliente</h1>
+       <form id="dataCliente" class="MyFormulario">
+          <fieldset>
+            <div class="cajaInfo">
+                <label for="NitCliente">NIT</label>
+                <input 
+                name="NitCliente"
+                id="NitCliente" 
+                type="text" 
+                placeholder="NIT" 
+                pattern="[0-9+]+[,-.]+[0-9]{1,1}$" 
+                autocomplete="off"
+                required>
+                <div class="validation"></div>
+
+                <label for="DenominacioCliente">Denominacio/Nombre comercial</label>
+                <input 
+                onchange="Evento.razonSocial(this)"
+                name="DenominacioCliente"
+                id="DenominacioCliente"
+                type="text" 
+                placeholder="Denominacio" 
+                autocomplete="off"
+                required>
+                <div class="validation"></div>
+
+                <label for="tipoDeSociedadCliente" >Tipo de sociedad</label>
+                <select onchange="Evento.razonSocial(this)" id="tipoDeSociedadCliente" name="tipoDeSociedadCliente" required>
+
+                  <option 
+                      value="">
+                      Tipo de sosiedad
+                  </option>
+
+                  <option 
+                      value="S.A.S.">
+                      Sociedad por Acciones Simplificada (S.A.S)
+                  </option>
+
+                  <option 
+                      value="S.A.">
+                      Sociedad Anónima (S.A)
+                  </option>
+
+                  <option 
+                      value="Ltda.">
+                      Sociedad Limitada (Ltda.)
+                  </option>
+
+                  <option 
+                      value="E.U.">
+                      Empresa Unipersonal (E.U.)
+                  </option>
+
+                  <option 
+                      value="Hermanos">
+                      Sociedad Colectiva (Hermanos)
+                  </option>
+
+                  <option 
+                      value="Hijos">
+                      Sociedad Colectiva (Hijos)
+                  </option>
+
+                  <option 
+                      value="& Cia">
+                      Sociedad Colectiva (& Cia)
+                  </option>
+
+                  <option 
+                      value="S">
+                      Sociedad Comandita Simple (S)
+                  </option>
+
+                  <option 
+                      value="C">
+                      Sociedad Comandita Simple (C)
+                  </option>
+
+                  <option 
+                      value="SCA">
+                      Sociedad Comandita por Acciones (SCA)
+                  </option>
+
+                  <option 
+                      value="Empresa Asociativa de Trabajo">
+                      Empresa Asociativa de Trabajo
+                  </option>
+
+                  <option 
+                      value="Persona Natural ">
+                      Persona Natural
+                  </option>
+
+                </select>
+                <div class="validation"></div>
+
+                <label for="razonSocialCliente">Razón Social</label>
+                <input 
+                name="razonSocialCliente"
+                id="razonSocialCliente" 
+                type="text" 
+                placeholder="Razón Social" 
+                autocomplete="off"
+                readonly
+                required>
+                <div class="validation"></div>
+                
+            </div>
+            <div class="cajaInfo">
+               
+                <label for="numerotelefonicoCliente">Numero Telefonico</label>
+                <input 
+                name="numerotelefonicoCliente"
+                id="numerotelefonicoCliente" 
+                type="text" 
+                placeholder="Telefonico / Mobil" 
+                pattern="[0-9+]{1,}$" 
+                autocomplete="off"
+                required>
+                <div class="validation"></div>
+                
+                <label for="emailCliente">e-mail</label>
+                <input 
+                name="emailCliente" 
+                id="emailCliente" 
+                type="email" 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                placeholder="e-mail" 
+                autocomplete="off"
+                required>
+                <div class="validation"></div>
+                
+                <label for="webCliente">Web</label>
+                <input 
+                name="webCliente"
+                id="webCliente" 
+                type="text" 
+                placeholder="Web" 
+                pattern="[a-z0-9._%+-]+\.[a-z]{2,4}$" 
+                autocomplete="off"
+                required>
+                <div class="validation"></div>
+                
+            </div>
+            <div class="cajaInfo">
+                
+                <label for="domicilioCliente">Domicilio</label>
+                <input 
+                name="domicilioCliente"
+                id="domicilioCliente" 
+                type="text" 
+                placeholder="Domicilio" 
+                autocomplete="off"
+                required>
+                <div class="validation"></div>
+                
+                <label for="ciudadCliente">Ciudad</label>
+                <input 
+                name="ciudadCliente"
+                id="ciudadCliente" 
+                type="text" 
+                placeholder="Ciudad" 
+                pattern=".{2,}$" 
+                autocomplete="off"
+                required>
+                <div class="validation"></div>
+                
+            </div>
+            
+            
+            
+    
+            
+            <div class="button-primary-a" onclick="My.getCtrl().newCliente(My.getID('dataCliente').ID);location.href='#/';">Crear</div>
+            
+          </fieldset>
+        </form>
+   </div>
+</div>

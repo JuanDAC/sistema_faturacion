@@ -1,0 +1,126 @@
+<div class="l-content-all">
+   <div class="l-content-flex">
+      <h1 class="titulo_factura">Nuevo Articulo</h1>
+       <form id="dataArticulo" class="MyFormulario">
+          <fieldset>
+           <div class="cajaInfo">
+                
+                <label for="ArticuloNombre">Nombre</label>
+                <input 
+                name="ArticuloNombre"
+                id="ArticuloNombre" 
+                type="text" 
+                placeholder="Nombre" 
+                autocomplete="off"
+                required>
+                <div class="validation"></div>
+                
+                <label 
+                for="ArticuloDescripcion">Descripción</label>
+                <textarea 
+                name="ArticuloDescripcion"                
+                id="ArticuloDescripcion"  
+                placeholder="Descripción" 
+                required></textarea>
+                <div class="validation"></div>
+                
+                <label 
+                for="ArticuloCategoria">Categoria</label>
+                <select 
+                onchange="My.getCtrl().codigoProducto(this);"
+                name="ArticuloCategoria"
+                id="ArticuloCategoria" 
+                required>
+                  <option value="">Categoria</option>
+                  <option value="Producto">Producto</option>
+                  <option value="Servicio">Servicio</option>
+                  <option value="Materia Prima">Materia Prima</option>
+                  <option value="Ing. Tercero">Ing. Tercero</option>
+                </select>
+                <div class="validation"></div>
+               
+               
+                
+            </div>
+            <div class="cajaInfo">
+                
+               
+                <label 
+                for="ArticuloExistancias">Existencias</label>
+                <input 
+                name="ArticuloExistancias"
+                id="ArticuloExistancias" 
+                type="text"
+                pattern="[0-9]{1,}"
+                placeholder="Existencias" 
+                required>
+                <div class="validation"></div>
+               
+                <label 
+                for="ArticuloValorUnidad">Valor Unidad</label>
+                <input 
+                name="ArticuloValorUnidad"
+                id="ArticuloValorUnidad" 
+                type="text"
+                pattern="[0-9]*"
+                placeholder="Valor Unidad En Pesos" 
+                required>
+                <div class="validation"></div>
+            </div>
+            <div class="cajaInfo">
+                
+                
+                <label 
+                for="ArticuloSede">Sede</label>
+                <select 
+                onchange="My.getCtrl().codigoProducto(this);"
+                name="ArticuloSede"
+                id="ArticuloSede" 
+                required>
+                  <option value="">Sede</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                </select>
+                <div class="validation"></div>
+                
+                <label 
+                for="ArticuloEstante">Estante</label>
+                <select 
+                onchange="My.getCtrl().codigoProducto(this);"
+                name="ArticuloEstante"
+                id="ArticuloEstante" 
+                required>
+                  <option value="">Estante</option>
+                  <option value="-0a">-0a</option>
+                  <option value="-0b">-0b</option>
+                  <option value="-0c">-0c</option>
+                  <option value="-0d">-0d</option>
+                  <option value="-0e">-0e</option>
+                  <option value="-0f">-0f</option>
+                </select>
+                <div class="validation"></div>
+                
+            </div>
+            <div class="cajaInfo">
+                <label 
+                for="ArticuloCodigo">Codigo</label>
+                <input 
+                type="text"
+                name="ArticuloCodigo"
+                id="ArticuloCodigo"
+                placeholder="Codigo" 
+                readonly>
+                <div class="validation"></div>
+            </div>
+            
+            
+            <div class="button-primary-a" onclick="My.getCtrl().newProducto(My.getID('dataArticulo').ID);location.href='#/';">Crear</div>
+            
+          </fieldset>
+        </form>
+   </div>
+</div>

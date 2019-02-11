@@ -1,0 +1,321 @@
+<div class="l-content-all">
+   <div class="l-content-flex">
+      <h1 class="titulo_factura" id="tituloOrganizacion">Tu organización</h1>
+        <template id="contenidoTituloOrganizacion">
+            <small>
+                <i class="tituloOrganizacion"></i>
+            </small>
+        </template>
+       <form id="dataOrganizacion" class="MyFormulario">
+          <fieldset>
+            <div class="cajaInfo">
+                <label for="NitOrganizacion">NIT</label>
+                <input 
+                name="NitOrganizacion"
+                type="text" 
+                placeholder="NIT" 
+                pattern="[0-9+]+[,-.]+[0-9]{1,1}$" 
+                id="NitOrganizacion" 
+                autocomplete="off"
+                required
+                exigido="true">
+                <div class="validation"></div>
+
+                <label for="DenominacioOrganizacion">Denominación/Nombre comercial</label>
+                <input 
+                onchange="Evento.razonSocial(this)"
+                name="DenominacioOrganizacion"
+                type="text" 
+                placeholder="Denominación" 
+                id="DenominacioOrganizacion"
+                autocomplete="off"
+                required
+                exigido="true">
+                <div class="validation"></div>
+
+                <label 
+                for="tipoDeSociedadOrganizacion" >Tipo de sociedad</label>
+                <select 
+                id="tipoDeSociedadOrganizacion" 
+                name="tipoDeSociedadOrganizacion" 
+                onchange="Evento.razonSocial(this)" 
+                autocomplete="off"
+                required
+                exigido="true">
+
+                  <option 
+                      value="">
+                      Tipo de sociedad
+                  </option>
+
+                  <option 
+                      value="S.A.S.">
+                      Sociedad por Acciones Simplificada (S.A.S)
+                  </option>
+
+                  <option 
+                      value="S.A.">
+                      Sociedad Anónima (S.A)
+                  </option>
+
+                  <option 
+                      value="Ltda.">
+                      Sociedad Limitada (Ltda.)
+                  </option>
+
+                  <option 
+                      value="E.U.">
+                      Empresa Unipersonal (E.U.)
+                  </option>
+
+                  <option 
+                      value="Hermanos">
+                      Sociedad Colectiva (Hermanos)
+                  </option>
+
+                  <option 
+                      value="Hijos">
+                      Sociedad Colectiva (Hijos)
+                  </option>
+
+                  <option 
+                      value="& Cia">
+                      Sociedad Colectiva (& Cia)
+                  </option>
+
+                  <option 
+                      value="S">
+                      Sociedad Comandita Simple (S)
+                  </option>
+
+                  <option 
+                      value="C">
+                      Sociedad Comandita Simple (C)
+                  </option>
+
+                  <option 
+                      value="SCA">
+                      Sociedad Comandita por Acciones (SCA)
+                  </option>
+
+                  <option 
+                      value="Empresa Asociativa de Trabajo">
+                      Empresa Asociativa de Trabajo
+                  </option>
+
+                  <option 
+                      value="Persona Natural ">
+                      Persona Natural
+                  </option>
+
+                </select>
+                <div class="validation"></div>
+
+                <label for="razonSocialOrganizacion">Razón Social</label>
+                <input 
+                name="razonSocialOrganizacion"
+                id="razonSocialOrganizacion" 
+                type="text" 
+                placeholder="Razón Social" 
+                autocomplete="off"
+                readonly
+                required
+                exigido="">
+                <div class="validation"></div>
+                
+            </div>
+            <div class="cajaInfo">
+               <label for="predijoDeFacturaOrganizacion">Prefijo De Facturación</label>
+                <input 
+                name="predijoDeFacturaOrganizacion"
+                id="predijoDeFacturaOrganizacion" 
+                autocomplete="off"
+                placeholder="Prefijo De Facturación" 
+                type="text" 
+                pattern="[0-9+]{1,}$" 
+                required
+                exigido="">
+                <div class="validation"></div>
+                
+                <label for="autorizacionDeFacturaOrganizacionDel">Autorizacion De Facturación</label>
+                <input 
+                name="autorizacionDeFacturaOrganizacionDel"
+                id="autorizacionDeFacturaOrganizacionDel" 
+                onchange="Evento.numeroMaxFactura(this);"
+                type="text" 
+                placeholder="Del No." 
+                pattern="[0-9+]{1,}" 
+                autocomplete="off"
+                required
+                exigido="true">
+                <div class="validation"></div>
+
+                <input 
+                name="autorizacionDeFacturaOrganizacionAl"
+                id="autorizacionDeFacturaOrganizacionAl" 
+                onchange="Evento.numeroMaxFactura(this);"
+                type="text" 
+                placeholder="Al No." 
+                pattern="[0-9+]{1,}" 
+                autocomplete="off"
+                required
+                exigido="true">
+                <div class="validation"></div>
+                
+            </div>
+            <div class="cajaInfo">
+               
+                <label for="numerotelefonicoOrganizacion">Numero Telefonico</label>
+                <input 
+                name="numerotelefonicoOrganizacion"
+                id="numerotelefonicoOrganizacion" 
+                type="text" 
+                placeholder="Telefonico / Mobil" 
+                pattern="[0-9+]{2,}$" 
+                autocomplete="off"
+                required
+                exigido="true">
+                <div class="validation"></div>
+                
+                <label for="emailOrganizacion">e-mail</label>
+                <input 
+                type="email" 
+                name="emailOrganizacion" 
+                id="emailOrganizacion" 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                placeholder="e-mail" 
+                autocomplete="off"
+                required
+                exigido="true">
+                <div class="validation"></div>
+                
+                <label for="webOrganizacion">Web</label>
+                <input 
+                name="webOrganizacion"
+                id="webOrganizacion" 
+                type="text" 
+                placeholder="Web" 
+                pattern="[a-z0-9._%+-]+\.[a-z]{2,4}$" 
+                autocomplete="off"
+                required
+                exigido="">
+                <div class="validation"></div>
+                
+            </div>
+            <div class="cajaInfo">
+                
+                <label for="domicilioOrganizacion">Domicilio</label>
+                <input 
+                name="domicilioOrganizacion"
+                id="domicilioOrganizacion" 
+                type="text" 
+                placeholder="Domicilio" 
+                autocomplete="off"
+                required
+                exigido="true">
+                <div class="validation"></div>
+                
+                <label for="ciudadOrganizacion">Ciudad</label>
+                <input 
+                name="ciudadOrganizacion"
+                id="ciudadOrganizacion" 
+                type="text" 
+                placeholder="Ciudad" 
+                pattern=".{2,}$" 
+                autocomplete="off"
+                required
+                exigido="true">
+                <div class="validation"></div>
+                
+            </div>
+            <div class="cajaInfo">
+               
+                <label 
+                for="regimenOrganizacion" >Regimen</label>
+                <select 
+                id="regimenOrganizacion"
+                name="regimenOrganizacion"
+                onchange="My.getCtrl().ivaTarifa(this);" 
+                exigido="true"
+                required>
+
+                  <option 
+                      value="">
+                      Tipo de Regimen
+                  </option>
+
+                  <option 
+                      value="Regimen Comun">
+                      Regimen Comun
+                  </option>
+
+                  <option 
+                      value="Regimen Simplificado">
+                      Regimen Simplificado
+                  </option>
+
+                </select>
+                <div class="validation"></div>
+                
+                <label for="tarifaIvaOrganizacion">Tarifa IVA</label>
+                <input 
+                name="tarifaIvaOrganizacion"
+                id="tarifaIvaOrganizacion" 
+                type="text" 
+                placeholder="Tarifa IVA" 
+                autocomplete="off"
+                readonly
+                exigido=""
+                required>
+                <div class="validation"></div>
+                
+                <label for="actividadEconomicaOrganizacion">Actividad Economica</label>
+                <input 
+                name="actividadEconomicaOrganizacion"
+                id="actividadEconomicaOrganizacion" 
+                type="text" 
+                placeholder="Actividad Economica" 
+                pattern="[0-9+ \ ]{1,}$" 
+                autocomplete="off"
+                exigido="true"
+                required>
+                <div class="validation"></div>
+
+                <label for="autorizacionDeLaDianOrganizacion">Autorizacion De La DIAN</label>
+                <input 
+                name="autorizacionDeLaDianOrganizacion"
+                id="autorizacionDeLaDianOrganizacion" 
+                type="text" 
+                placeholder="Autorizacion De La DIAN" 
+                pattern="[0-9+]{1,}$" 
+                autocomplete="off"
+                exigido="true"
+                required>
+                <div class="validation"></div>
+                           
+                <input 
+                type="radio" 
+                id="SiRetenedores" 
+                name="retenedores"
+                required>
+                <label class="checklavel" for="SiRetenedores"></label>
+                <lavel class="label-inline lavel-check"><small>Retengo IVA / No Retengo IVA</small></lavel>
+                <input 
+                type="radio" 
+                id="NoRetenedores" 
+                name="retenedores"
+                required>
+                <label class="checklavel" for="NoRetenedores"></label>
+                            
+            </div>
+            
+            
+            
+    
+             
+            <div class="button-primary-a" onclick="My.getCtrl().newOrganizacion(My.getID('dataOrganizacion').ID);location.href='#/'">Finalizar</div>
+            
+          </fieldset>
+        </form>
+   </div>
+</div>
